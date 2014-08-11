@@ -22,12 +22,14 @@ Set the following ENV variables:
 
 ```ruby
 ENV['MANDRILL_DOMAIN']
+ENV['MANDRILL_DEFAULT_HOST']
 ENV['MANDRILL_USERNAME']
 ENV['MANDRILL_PASSWORD']
 ```
 
-Your app is now configured to send e-mail via Mandrill. If `ENV['MANDRILL_DOMAIN']` is not set,
-the environment will not be configured for Mandrill. This is useful in the test/development environment.
+Your app is now configured to send e-mail via Mandrill. If `ENV['MANDRILL_DEFAULT_HOST']` is not set, `ENV['MANDRILL_DOMAIN']`
+will be used for `default_url_options`. If `ENV['MANDRILL_DOMAIN']` is not set, the entire configuration will be skipped. This is
+useful in the test/development environment.
 
 ## Contributing
 
